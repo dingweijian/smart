@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.smart.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.smart.domain.User" >
+    <result column="uid" property="ID" jdbcType="VARCHAR" />
+    <result column="uname" property="NAME" jdbcType="VARCHAR" />
+    <result column="uremark" property="REMARK" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="selectUsers" resultMap="BaseResultMap">
+  	select ID, NAME, REMARK From USER 
+  </select>
+  
+</mapper>
